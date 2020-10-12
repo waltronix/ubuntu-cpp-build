@@ -4,7 +4,7 @@ FROM ubuntu:focal
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y \
         git cmake ninja-build \
-        clang clang-tidy clang-format clang-tools lld lldb
+        clang clang-tidy clang-format clang-tools clangd lld lldb
 
 RUN update-alternatives --install /usr/bin/cc cc /usr/bin/clang 100 \
  && update-alternatives --install /usr/bin/c++ c++ /usr/bin/clang++ 100 \
